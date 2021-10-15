@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+/* thanks to wayou for his/her ideas and some codes */
 <html>
   <head>
     <meta charset="utf-8" />
@@ -46,13 +46,18 @@ body {font-family: Arial;}
 </style>
   </head>
   <body>
+    <h2>录音模块</h2>
+    <button id="startRecordingButton">开始录音</button>
+    <button id="stopRecordingButton">停止录音</button>
+    <button id="playButton">查看录音</button>
+    <button id="downloadButton">发送录音</button>
+    <div id="info"></div>
+    <hr>
     <h2>口语测试</h2>
-
 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'jtz')">简体字</button>
   <button class="tablinks" onclick="openCity(event, 'ftz')">繁体字</button>
 </div>
-
 <div id="jtz" class="tabcontent">
   <h3>(一)请说出以下英文单词的中文意思:</h3>
   <p>1. Shell</p>
@@ -69,18 +74,16 @@ body {font-family: Arial;}
   <p>10.赤眉军与绿林军两支庞大的起义军队,分别在南边与东边打败了王莽带领的军队,这个消息一传开,所有地方的农民也纷纷起义。在此同时,还有一些没落的贵族,也趁机起兵造反。</p>
   <p>11.山河令的剧情主线就是各派争夺琉璃甲壳,武林死伤无数,就为取得这琉璃甲壳钥匙,打开那武器宝库,号令天下。在第十五集中,龙渊阁主来到英雄大会, 临时变卦栽赃高盟主私吞武库。高盟主自愿削发出家,欲将盟主之位传位于张成岭。高盟主发誓要铲平鬼谷,让众人歃(shà)血为盟。周子舒温客行是“道不同,不相为谋”,周子舒愤然离去。</p>
   <p>12. </p>
-<p>老板:几位帅哥美女,我正在下载刚才拍的照片和影片。现在给你们还是等下载好了再一起给你们? </p>
-<p>顾客 1:现在看看吧,我想先看看照片儿和影片儿压压惊。</p> 
-<p>老板:好的,那给您看看。 </p>
-<p>顾客 2 对众人说:我感觉我刚才被吓到了,现在走出来的只是我的躯壳,我的灵魂还留在鬼屋里。 </p>
-<p>老板:我们这个主题算是所有系列里面最恐怖的,你们已经算很勇敢的了。</p> 
-<p>顾客 3: 你们这儿的 NPC 好敬业啊, 我看到他们那个脑壳跟舌苔上竟然都涂了颜料,真是可以,下次推荐我的朋友也来玩。 </p>
-<p>老板:那就太好了,下次几位还可以来我们店里体验体验别的主题,推荐朋友来可以打折哦。</p> 
-<p>顾客:谢谢老板啦。</p>
+  <p>老板:几位帅哥美女,我正在下载刚才拍的照片和影片。现在给你们还是等下载好了再一起给你们? </p>
+  <p>顾客 1:现在看看吧,我想先看看照片儿和影片儿压压惊。</p> 
+  <p>老板:好的,那给您看看。 </p>
+  <p>顾客 2 对众人说:我感觉我刚才被吓到了,现在走出来的只是我的躯壳,我的灵魂还留在鬼屋里。 </p>
+  <p>老板:我们这个主题算是所有系列里面最恐怖的,你们已经算很勇敢的了。</p> 
+  <p>顾客 3: 你们这儿的 NPC 好敬业啊, 我看到他们那个脑壳跟舌苔上竟然都涂了颜料,真是可以,下次推荐我的朋友也来玩。 </p>
+  <p>老板:那就太好了,下次几位还可以来我们店里体验体验别的主题,推荐朋友来可以打折哦。</p> 
+  <p>顾客:谢谢老板啦。</p>
   <p>13. 2020东京奥运会已经落下帷幕,中国运动健儿的出色表现让人惊喜、感动并自豪,其中中国女子游泳运动员的金牌获得者全红婵也是令人印象十分深刻。想必大家对这些跳水奥运冠军的幕后故事有所关注。每一个奥运冠军的背后除了天赋、努力之外,还有一个国家的综合实力的支撑。我们既要看到跳水冠军拿到金牌时露出的微笑,也要看到他们因为长期训练而“消失的指纹”、“掉色的头发”, 同时我们更不能翘尾巴,骄傲自满,应该更加脚踏实地地发展。当综合国力稳步提高,我们在奥运会乃至其他大大小小的国际场合,都将更加自信从容。</p>
-  
 </div>
-
 <div id="ftz" class="tabcontent">
   <h3>(一)請說出以下英文單詞的中文意思:</h3>
   <p>1. Shell</p>
@@ -97,17 +100,16 @@ body {font-family: Arial;}
   <p>10.赤眉軍與綠林軍兩支龐大的起義軍隊,分別在南邊與東邊打敗了王莽帶領的軍隊,這個消息一傳開,所有地方的農民也紛紛起義。在此同時,還有一些沒落的貴族,也趁機起兵造反</p>
   <p>11.山河令的劇情主線就是各派爭奪琉璃甲殼,武林死傷無數,就為取得這琉璃甲殼鑰匙,打開那武器寶庫,號令天下。在第十五集中,龍淵閣主來到英雄大會, 臨時變卦栽贓高盟主私吞武庫。高盟主自願削發出家,欲將盟主之位傳位於張成嶺。高盟主發誓要鏟平鬼谷,讓眾人歃(shà)血為盟。周子舒溫客行是“道不同,不相為謀”,周子舒憤然離去。</p>
   <p>12.</p>
-<p>老板:幾位帥哥美女,我正在下載剛才拍的照片和影片。現在給你們還是等下載好了再一起給你們?</p>
-<p>顧客1:現在看看吧,我想先看看照片兒和影片兒壓壓驚。</p>
-<p>老板:好的,那給您看看。</p>
-<p>顧客2對眾人說:我感覺我剛才被嚇到了,現在走出來的只是我的軀殼,我的靈魂還留在鬼屋裏。</p>
-<p>老板:我們這個主題算是所有系列裹面最恐怖的,你們已經算很勇敢的了。</p>
-<p>顧客3:你們這兒的NPC好敬業啊,我看到他們那個腦殼跟舌苔上竟然都塗了顔料,真是可以,下次推薦我的朋友也來玩。</p>
-<p>老板:那就太好了,下次幾位還可以來我們店裏體驗體驗別的主題,推薦朋友來可以打折哦。</p>
-<p>顧客:謝謝老板啦</p>
+  <p>老板:幾位帥哥美女,我正在下載剛才拍的照片和影片。現在給你們還是等下載好了再一起給你們?</p>
+  <p>顧客1:現在看看吧,我想先看看照片兒和影片兒壓壓驚。</p>
+  <p>老板:好的,那給您看看。</p>
+  <p>顧客2對眾人說:我感覺我剛才被嚇到了,現在走出來的只是我的軀殼,我的靈魂還留在鬼屋裏。</p>
+  <p>老板:我們這個主題算是所有系列裹面最恐怖的,你們已經算很勇敢的了。</p>
+  <p>顧客3:你們這兒的NPC好敬業啊,我看到他們那個腦殼跟舌苔上竟然都塗了顔料,真是可以,下次推薦我的朋友也來玩。</p>
+  <p>老板:那就太好了,下次幾位還可以來我們店裏體驗體驗別的主題,推薦朋友來可以打折哦。</p>
+  <p>顧客:謝謝老板啦</p>
   <p>13. 2020東京奧運會已經落下帷幕,中國運動健兒的出色表現讓人驚喜、感動並自豪,其中中國女子遊泳運動員的金牌獲得者全紅嬋也是令人印象十分深刻。想必大家对这些跳水奥运冠军的幕后故事有所关注。每一個奥運冠軍的背後除了天赋、努力之外,還有一個國家的綜合實力的支撐。我們既要看到跳水冠軍拿到金牌時露出的微笑,也要看到他們因為長期訓練而“消失的指紋”、“掉色的頭發”,同時我們更不能翹尾巴,驕傲自滿,應該更加腳踏實地地發展。當綜合國力穩步提高,我們在奥運會乃至其他大大小小的國際場合,都將更加自信從容</p>
 </div>
-
 <script>
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
@@ -123,39 +125,25 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 </script>
-    
-    
-    
-    <h1>测试</h1>
-
-    <button id="startRecordingButton">开始录音</button>
-    <button id="stopRecordingButton">停止录音</button>
-    <button id="playButton">查看录音</button>
-    <button id="downloadButton">发送录音</button>
-
-    <div id="info"></div>
-
-    <script>
-      var start = 0;
-      var SAMPLE_RATE = 44100;
-      String.prototype.toHHMMSS = function() {
-        var sec_num = parseInt(this, 10); // don't forget the second param
-        var hours = Math.floor(sec_num / 3600);
-        var minutes = Math.floor((sec_num - hours * 3600) / 60);
-        var seconds = sec_num - hours * 3600 - minutes * 60;
-
-        if (hours < 10) {
-          hours = "0" + hours;
-        }
-        if (minutes < 10) {
-          minutes = "0" + minutes;
-        }
-        if (seconds < 10) {
-          seconds = "0" + seconds;
-        }
-        return hours + ":" + minutes + ":" + seconds;
-      };
-
+<script>
+var start = 0;
+var SAMPLE_RATE = 44100;
+  String.prototype.toHHMMSS = function() {
+    var sec_num = parseInt(this, 10); // don't forget the second param
+    var hours = Math.floor(sec_num / 3600);
+    var minutes = Math.floor((sec_num - hours * 3600) / 60);
+    var seconds = sec_num - hours * 3600 - minutes * 60;
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    return hours + ":" + minutes + ":" + seconds;
+    };
       var startRecordingButton = document.getElementById(
         "startRecordingButton"
       );
